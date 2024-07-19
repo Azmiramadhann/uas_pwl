@@ -34,10 +34,17 @@ $routes->get('getcost', 'TransaksiController::getcost', ['filter' => 'auth']);
 $routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
 
 
+
 $routes->get('faq', 'Home::faq', ['filter' => 'auth']);
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);
 $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
 
+$routes->get('transaksi', 'Home::transaksi', ['filter' => 'auth']);
+$routes->post('transaksi', 'Home::updateTransaksi', ['filter' => 'auth']);
+$routes->get('/transaksi/download', 'Home::downloadTransaksi');
+
+
 $routes->group('api', function ($routes) {
     $routes->post('monthly', 'ApiController::monthly');
+    $routes->post('yearly', 'ApiController::yearly');
 });
