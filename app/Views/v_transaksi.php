@@ -43,7 +43,7 @@
                                     <h5 class="modal-title">Edit Data</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form action="<?= base_url('transaksi/update') ?>" method="post">
+                                <form action="<?= base_url('transaksi') ?>" method="post">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="id" value="<?= $item['id'] ?>">
                                     <div class="form-group">
